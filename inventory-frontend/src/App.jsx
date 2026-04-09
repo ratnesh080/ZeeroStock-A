@@ -20,7 +20,7 @@ function App() {
     }
 
     const query = new URLSearchParams({ q, category, minPrice, maxPrice }).toString();
-    const response = await fetch(`http://localhost:6001/search?${query}`);
+    const response = await fetch(`https://zeero-stock-a-gzv8.vercel.app/search?${query}`);
     const data = await response.json();
     setResults(data);
   };
